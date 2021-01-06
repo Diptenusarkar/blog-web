@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primery: rgb(216, 124, 3);
+    --color-secendery: green;
+    --bor-c-primery: rgb(255, 0, 0);
+    --bor-c-secendery: rgb(0, 255, 255);
+    --link-color-primery: rgb(238, 0, 134);
+    --link-bg-color-primery: rgb(255, 255, 255);
+    --navigation-color: rgb(255, 255, 255);
+    --navigation-bg-color: green;
+    --active-class-color-primery: rgb(255, 72, 0);
+    --active-class-bg-color: rgb(0, 255, 234);
+}
+
+body {
+    color: #ffffff;
+    background: black;
+}
+
+.header::before {
+    /* background-image: url(https://source.unsplash.com/daily); */
+    background-image: url(https://source.unsplash.com/1600x900/?food,water);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .5;
+}
+
+    .navigation {
+        list-style: none;
+        display: flex;
+        /* align-items: center; */
+
+    }
+
+        .nav-link {
+            margin: 10px;
+            
+            padding: 5px 10px;
+            border-radius: 5px;
+            /* text-align: center; */
+        }
+        .nav-link:not(.active) {
+            background-color: var(--navigation-bg-color);
+        }
+
+            .nav-link a {
+                text-decoration: none;
+                color: var(--navigation-color);
+                text-transform: uppercase;
+            }
+
+        .active a{
+            background-color: var(--active-class-bg-color);
+            color: var(--active-class-color-primery);
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+
+/* ***************************************** */
+/* post info  */
+/* ************************************* */
+.main-post {
+    /* border: 2px solid var(--bor-c-primery); */
+    /* padding: 20px 10px; */
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: justify; */
+    justify-content: center;
+}
+    .main-post-div {
+        padding: 10px 30px;
+        border: 2px solid var(--bor-c-secendery);
+        border-radius: 12px;
+        width: 48%;
+        margin: 10px;
+    }
+        .post-heading {
+            color: var(--color-primery);
+            text-transform: uppercase;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .post-info {
+            text-align: justify;
+        }
+
+        .full-p-click {
+            text-decoration: none;
+            color: var(--link-color-primery);
+            background-color: var(--link-bg-color-primery);
+            padding: 10px 20px;
+            display: inline-flex;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-size: 20px;
+            float: left;
+        }
+
+        .post-share-box {
+            float: right;
+        }
+
+            .bi {
+                height: 20px;
+                width: 20px;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+
+                .bi-facebook {
+                    color: #3b5998;
+                }
+
+                .bi-twitter {
+                    color: #1DA1F2 ;
+                }
+
+                .bi-instagram {
+                    color: #FD1D1D;
+                }
+
+                .bi-linkedin {
+                    color: #0077B5;
+                }
